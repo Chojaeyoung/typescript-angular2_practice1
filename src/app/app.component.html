@@ -1,0 +1,23 @@
+<h1>
+  {{title}}
+</h1>
+<!--<table>
+  <tr newsHighlight *ngFor="let news of newss; let i = index;"  [ngClass]=''>
+    <td class="idx">{{i+1}}</td>
+    <td class="img"><img src="{{news.imgUrl}}"/></td>
+    <td class="title">{{news.title}}</td>
+  </tr>
+</table>-->
+<div class="news_wrap">
+  <ol>
+    <li newsHighlight *ngFor="let news of newss; let i = index;"  [ngClass]='newsClass'>
+      <div>
+        <span class="number">{{i+1}}</span>
+        <a>
+          <img src="{{news.imgUrl}}"/>
+          <span>{{news.title}}</span>
+        </a>
+      </div>
+    </li>
+  </ol>
+</div>

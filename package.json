@@ -1,0 +1,49 @@
+{
+  "name": "jspm-typescript-seed",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "build": "tsc -p src",
+	"build:watch": "tsc -p src/ -w",
+    "build:trace": "tsc -p src --traceResolution",
+    "build:debug": "tsc -p src --listFiles --listEmittedFiles",
+    "bundle": "cd src && jspm bundle main --inject",
+    "unbundle": "cd src && jspm unbundle",
+    "bundle-sfx": "cd src && jspm bundle-sfx main build-all.js",
+    "serve": "lite-server",
+	"start": "npm run build:watch\" \"npm serve\""
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
+    "jspm": "^0.16.52",
+    "lite-server": "^2.2.2",
+    "typescript": "^2.2.1"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "src",
+      "packages": "jspm_packages"
+    },
+    "configFile": "src/systemjs.config.js",
+    "dependencies": {
+      "@angular/common": "npm:@angular/common@^2.4.8",
+      "@angular/core": "npm:@angular/core@^2.4.8",
+      "@angular/forms": "npm:@angular/forms@^2.4.8",
+      "@angular/http": "npm:@angular/http@^2.4.8",
+      "@angular/platform-browser": "npm:@angular/platform-browser@^2.4.8",
+      "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@^2.4.8",
+      "@angular/router": "npm:@angular/router@^3.4.8",
+      "core-js": "npm:core-js@^2.4.1",
+      "rxjs": "npm:rxjs@^5.2.0",
+      "zone.js": "npm:zone.js@^0.7.7"
+    },
+    "devDependencies": {}
+  },
+  "dependencies": {
+    "@types/node": "^7.0.5"
+  }
+}
